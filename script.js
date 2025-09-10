@@ -39,7 +39,7 @@ const teamMembers = [
   }
 ];
 
-/*******************************/
+/***************ESERCIZIO****************/
 
 //-- SELEZIONE DEL CONTAINER --//
 const cardContainer = document.getElementById("#cardContainer");
@@ -49,18 +49,22 @@ let cards = "";
 
 //-- CYCLE PER GLI OGGETTI DELL'ARRAY --//
 for (let i = 0; i < teamMembers.length; i++) {
-   const teamMember = teamMembers[i];
+  const member = teamMembers[i]; //Estrapolazione del singolo oggetto dell'Array e lo "cicla" uno dopo l'altro finchè esistono oggetti da inserire
 
-   console.log(teamMember);
+  console.log(member); //Check console.log
+
+  cards += //Creazione del contenitore/card grazie al template literal (stringa, grazie al backtick``) per ogni oggetto, inserita nel cycle prenderà tutti gli oggetti dell'Array
+    `<div id="cardTeam">
+        <div id="cardImg">
+            <img src="${member.img}" alt="${member.name}">
+        </div>
+        <div id="cardInfo">
+            <h3>${member.name}</h3>
+            <p>${member.role}</p>
+            <label for="email">${member.email}</label>
+        </div>
+    </div>`;
+
+  console.log(cards); //Check console.log
 }
 
-//<div id="cardTeam">
-//    <div id="cardImg">
-//        <img src="img/male1.png">
-//    </div>
-//    <div id="cardInfo">
-//        <h3>Marco Bianchi</h3>
-//        <p>Designer</p>
-//        <label for="email">marcobianchi@team.com</label>
-//    </div>
-//</div>
