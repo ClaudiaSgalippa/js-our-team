@@ -44,7 +44,8 @@ const teamMembers = [
 //-- SELEZIONE DEL CONTAINER --//
 const cardContainer = document.getElementById("#cardContainer");
 
-//--  --//
+//-- MEMORIZZIAMO LE STRINGHE NEL PROCESSO DI OUTPUT (Variabile di accumulo Output/Stringhe) --//
+let cards = "";
 
 //-- CYCLE PER GLI OGGETTI DELL'ARRAY --//
 for (let i = 0; i < teamMembers.length; i++) {
