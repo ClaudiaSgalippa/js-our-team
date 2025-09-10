@@ -58,7 +58,7 @@ for (let i = 0; i < teamMembers.length; i++) {
   console.log(cards); //Check console.log
 }
 
-//-- OUTPUT DELLE CARDS (Container) --//
+//-- OUTPUT DELLE CARDS NELL'HTML (Container) --//
 cardContainer.innerHTML = cards;
 
 //-- FUNZIONE DI CREAZIONE DI UNA NUOVA CARD--//
@@ -77,6 +77,26 @@ function createNewCard(oggettoDiRiferimento) {
 
     return card
 }
+
+/**********DESTRUTTURANDO (404 file not found DA CONTROLLARE)**********/
+
+//function createNewCard(oggettoDiRiferimento) {
+//
+//  const { image, name, role, email } = oggettoDiRiferimento; //Nome delle proprietà
+//
+//  const card = `<div id="cardTeam">
+//        <div id="cardImg">
+//            <img src="${image}" alt="${name}">
+//        </div>
+//        <div id="cardInfo">
+//            <h3>${name}</h3>
+//            <p>${role}</p>
+//            <label for="email">${email}</label>
+//        </div>
+//    </div>`
+//
+//    return card
+//}
 
 /**************OPPURE**************/
 
@@ -101,5 +121,5 @@ function createNewCard(oggettoDiRiferimento) {
 //  console.log(cards); //Check console.log
 //}
 //
-////-- OUTPUT DELLE CARDS (Container) --//
+////-- OUTPUT DELLE CARDS NELL'HTML (Container) --//
 //cardContainer.innerHTML = cards;
