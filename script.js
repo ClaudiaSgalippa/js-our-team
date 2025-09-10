@@ -44,8 +44,14 @@ const teamMembers = [
 //-- SELEZIONE DEL CONTAINER --//
 const cardContainer = document.getElementById("#cardContainer");
 
-//-- CYCLE PER GLI OGGETTI DELL'ARRAY --//
+//--  --//
 
+//-- CYCLE PER GLI OGGETTI DELL'ARRAY --//
+for (let i = 0; i < teamMembers.length; i++) {
+   const teamMember = teamMembers[i];
+
+   console.log(teamMember);
+}
 
 //<div id="cardTeam">
 //    <div id="cardImg">
