@@ -38,3 +38,22 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+
+/*******************************/
+
+//-- SELEZIONE DEL CONTAINER --//
+const cardContainer = document.getElementById("#cardContainer");
+
+//-- CYCLE PER GLI OGGETTI DELL'ARRAY --//
+
+
+//<div id="cardTeam">
+//    <div id="cardImg">
+//        <img src="img/male1.png">
+//    </div>
+//    <div id="cardInfo">
+//        <h3>Marco Bianchi</h3>
+//        <p>Designer</p>
+//        <label for="email">marcobianchi@team.com</label>
+//    </div>
+//</div>
