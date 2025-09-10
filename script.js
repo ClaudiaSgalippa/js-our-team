@@ -47,26 +47,59 @@ const cardContainer = document.getElementById("cardContainer");
 //-- MEMORIZZIAMO LE STRINGHE NEL PROCESSO DI OUTPUT (Variabile di accumulo Output/Stringhe) --//
 let cards = "";
 
-//-- CYCLE PER GLI OGGETTI DELL'ARRAY --//
+//-- CYCLE PER GLI OGGETTI DELL'ARRAY (Scoporando la funzione ma passando i valori di riferimento necessari) --//
 for (let i = 0; i < teamMembers.length; i++) {
   const member = teamMembers[i]; //Estrapolazione del singolo oggetto dell'Array e lo "cicla" uno dopo l'altro finchè esistono oggetti da inserire
 
   console.log(member); //Check console.log
 
-  cards += //Creazione del contenitore/card grazie al template literal (stringa, grazie al backtick``) per ogni oggetto, inserita nel cycle prenderà tutti gli oggetti dell'Array
-    `<div id="cardTeam">
-        <div id="cardImg">
-            <img src="${member.img}" alt="${member.name}">
-        </div>
-        <div id="cardInfo">
-            <h3>${member.name}</h3>
-            <p>${member.role}</p>
-            <label for="email">${member.email}</label>
-        </div>
-    </div>`;
-
+  cards += createNewCard(member); //Scorporazione 
+  
   console.log(cards); //Check console.log
 }
 
 //-- OUTPUT DELLE CARDS (Container) --//
 cardContainer.innerHTML = cards;
+
+//-- FUNZIONE DI CREAZIONE DI UNA NUOVA CARD--//
+
+function createNewCard(oggettoDiRiferimento) {
+  const card = `<div id="cardTeam">
+        <div id="cardImg">
+            <img src="${oggettoDiRiferimento.img}" alt="${oggettoDiRiferimento.name}">
+        </div>
+        <div id="cardInfo">
+            <h3>${oggettoDiRiferimento.name}</h3>
+            <p>${oggettoDiRiferimento.role}</p>
+            <label for="email">${oggettoDiRiferimento.email}</label>
+        </div>
+    </div>`
+
+    return card
+}
+
+/**************OPPURE**************/
+
+////-- CYCLE PER GLI OGGETTI DELL'ARRAY --//
+//for (let i = 0; i < teamMembers.length; i++) {
+//  const member = teamMembers[i]; //Estrapolazione del singolo oggetto dell'Array e lo "cicla" uno dopo l'altro finchè esistono oggetti da inserire
+//
+//  console.log(member); //Check console.log
+//
+//  cards += //Creazione del contenitore/card grazie al template literal (stringa, grazie al backtick``) per ogni oggetto, inserita nel cycle prenderà tutti gli oggetti dell'Array
+//    `<div id="cardTeam">
+//        <div id="cardImg">
+//            <img src="${member.img}" alt="${member.name}">
+//        </div>
+//        <div id="cardInfo">
+//            <h3>${member.name}</h3>
+//            <p>${member.role}</p>
+//            <label for="email">${member.email}</label>
+//        </div>
+//    </div>`;
+//
+//  console.log(cards); //Check console.log
+//}
+//
+////-- OUTPUT DELLE CARDS (Container) --//
+//cardContainer.innerHTML = cards;
