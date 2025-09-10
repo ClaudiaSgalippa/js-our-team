@@ -42,7 +42,7 @@ const teamMembers = [
 /***************ESERCIZIO****************/
 
 //-- SELEZIONE DEL CONTAINER --//
-const cardContainer = document.getElementById("#cardContainer");
+const cardContainer = document.getElementById("cardContainer");
 
 //-- MEMORIZZIAMO LE STRINGHE NEL PROCESSO DI OUTPUT (Variabile di accumulo Output/Stringhe) --//
 let cards = "";
@@ -68,3 +68,5 @@ for (let i = 0; i < teamMembers.length; i++) {
   console.log(cards); //Check console.log
 }
 
+//-- OUTPUT DELLE CARDS (Container) --//
+cardContainer.innerHTML = cards;
