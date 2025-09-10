@@ -64,11 +64,11 @@ cardContainer.innerHTML = cards;
 //-- FUNZIONE DI CREAZIONE DI UNA NUOVA CARD--//
 
 function createNewCard(oggettoDiRiferimento) {
-  const card = `<div id="cardTeam">
-        <div id="cardImg">
+  const card = `<div id="cardTeam" class="d-flex col-md-4 p-5">
+        <div id="cardImg col-4">
             <img src="${oggettoDiRiferimento.img}" alt="${oggettoDiRiferimento.name}">
         </div>
-        <div id="cardInfo">
+        <div id="cardInfo" class="text-light text-center bg-success col-8">
             <h3>${oggettoDiRiferimento.name}</h3>
             <p>${oggettoDiRiferimento.role}</p>
             <label for="email">${oggettoDiRiferimento.email}</label>
